@@ -27,16 +27,6 @@ sudo docker run --rm $(test "$LINGVO_DEVICE" = "gpu" && echo "--runtime=nvidia")
 bazel test -c opt //lingvo:trainer_test //lingvo:models_test
 ```
 
-* for khz usage in one single gpu
-```shell
-export CUDA_VISIBLE_DEVICES=0
-bazel test -c opt //lingvo:trainer_test //lingvo:models_test --test_verbose_timeout_warnings
-```
-To specify the GPU device helps the error concerns about:
-```
-unable to create StreamExecutor for CUDA:0: failed initializing StreamExecutor for CUDA device ordinal 0: Internal: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_INVALID_DEVICE: invalid device ordinal 0
-```
-
 ### Installing directly
 
 This is an alternative to using Docker as described in the section above.
