@@ -59,3 +59,8 @@ lingvo/tasks/asr/tools/librispeech.03.parameterize_train.sh # extracting the fea
 ```
 bazel-bin/lingvo/trainer --enable_asserts=false --run_locally=cpu --mode=sync --model=asr.librispeech.Librispeech960Base --logdir=/tmp/librispeech/log --logtostderr
 ```
+## debug reference
+[use tensorboard](https://github.com/tensorflow/lingvo/issues/94)
+```python
+self._sess = tf_debug.TensorBoardDebugWrapperSession(self._sess, 'localhost:6008')
+```
