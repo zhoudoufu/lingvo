@@ -1,5 +1,11 @@
 # Lingvo
 
+
+#### KHz implementation
+* follow the [issues in main branch](https://github.com/tensorflow/lingvo/issues?utf8=✓&q=librispeech)
+
+* To make the script work for my usage: [modification notes](https://github.com/zhoudoufu/lingvo/tree/master/lingvo/tasks/asr)
+
 ## What is it?
 
 Lingvo is a framework for building neural networks in Tensorflow, particularly
